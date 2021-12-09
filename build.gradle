@@ -1,0 +1,32 @@
+plugins {
+    id 'dev.clojurephant.clojure' version '0.6.0'
+    id 'application'
+}
+
+group 'org.example'
+version '0.0.1-SNAPSHOT'
+repositories {
+    maven {
+        name = 'Clojars'
+        url = 'https://repo.clojars.org'
+    }
+    mavenCentral()
+}
+
+
+dependencies {
+    implementation 'org.clojure:clojure:1.10.3'
+
+    testRuntimeOnly 'org.ajoberstar:jovial:0.3.0'
+
+    devImplementation 'org.clojure:tools.namespace:1.1.0'
+}
+
+tasks.withType(Test) {
+    useJUnitPlatform()
+}
+
+application {
+    mainClassName("main.main/-main")
+}
+
