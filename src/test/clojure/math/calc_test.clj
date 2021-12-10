@@ -1,4 +1,4 @@
-(ns math.calc_test
+(ns math.calc-test
   (:require [clojure.test :refer :all]
             [math.calc :refer :all]))
 
