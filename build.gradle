@@ -28,6 +28,15 @@ tasks.withType(Test) {
     useJUnitPlatform()
 }
 
+clojure {
+    builds {
+        main {
+            aotAll()
+        }
+    }
+}
+
+
 application {
-    mainClassName("main.main/-main")
+    mainClassName("main.main")
 }
