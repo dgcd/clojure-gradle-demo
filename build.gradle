@@ -1,5 +1,5 @@
 plugins {
-    id 'dev.clojurephant.clojure' version '0.6.0'
+    id 'dev.clojurephant.clojure' version '0.7.0-alpha.1'
     id 'application'
 }
 
