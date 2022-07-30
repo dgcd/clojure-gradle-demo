@@ -1,5 +1,5 @@
 plugins {
-    id 'dev.clojurephant.clojure' version '0.7.0-alpha.1'
+    id 'dev.clojurephant.clojure' version '0.7.0-alpha.5'
     id 'application'
 }
 
@@ -33,6 +33,15 @@ clojure {
         main {
             aotAll()
         }
+    }
+}
+
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'clojure-gradle-demo',
+                'Implementation-Version': archiveVersion,
+                'Main-Class': 'clojure.main'
     }
 }
 
